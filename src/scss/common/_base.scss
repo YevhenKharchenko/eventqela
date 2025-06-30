@@ -63,3 +63,15 @@ html {
     margin-bottom: 80px;
   }
 }
+
+.section-subtitle {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+  color: #f1f5f9;
+
+  @include media(desktop) {
+    font-size: 48px;
+  }
+}
