@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="canonical" href="https://eventqela.site" />
+    <link rel="icon" type="image/png" href="/eventqela/favicon.png" />
+    <title>EventQela</title>
+    
+    <script type="module" crossorigin src="/eventqela/commonHelpers3.js"></script>
+    <link rel="modulepreload" crossorigin href="/eventqela/assets/vendor-74664e07.js">
+    <link rel="stylesheet" href="/eventqela/assets/vendor-fef9b9da.css">
+    <link rel="stylesheet" href="/eventqela/assets/styles-c4f8851f.css">
+  </head>
+  <body>
+    <header class="header">
+  <div class="container header-container">
+    <nav class="nav">
+      <a class="header-logo-link" href="./">
+        <picture>
+          <source
+            srcset="/eventqela/assets/header-logo-desk-4416e0e7.png "
+            media="(min-width: 1440px)"
+            width="130"
+            height="85"
+          />
+          <source
+            srcset="data:image/png;base64,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 "
+            width="54"
+            height="36"
+          />
+          <img
+            class="header-logo-img"
+            src="data:image/png;base64,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"
+            alt="Logo"
+            width="54"
+            height="36"
+          />
+        </picture>
+      </a>
+      <ul class="nav-list">
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="./index.html#home">Home</a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="./index.html#about">About</a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="./index.html#services">Services</a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="./index.html#results">Results</a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="./index.html#contact">Contact</a>
+        </li>
+      </ul>
+      <a href="#contact" class="header-book-btn">Book a Strategy Call</a>
+      <button class="nav-btn" type="button" aria-label="Open mobile menu">
+        <svg class="menu-icon" width="28" height="18">
+          <use href="/eventqela/assets/sprite-9a1000c3.svg#icon-menu"></use>
+        </svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+    <div class="context-menu">
+  <button class="close-btn" type="button" aria-label="Close mobile menu">
+    <svg class="close-icon" width="28" height="18">
+      <use href="/eventqela/assets/sprite-9a1000c3.svg#icon-close"></use>
+    </svg>
+  </button>
+  <nav class="context-nav">
+    <ul class="context-nav-list">
+      <li class="context-list-item">
+        <a class="context-list-link" href="./index.html#home">Home</a>
+      </li>
+      <li class="context-list-item">
+        <a class="context-list-link" href="./index.html#about">About </a>
+      </li>
+      <li class="context-list-item">
+        <a class="context-list-link" href="./index.html#services">Services</a>
+      </li>
+      <li class="context-list-item">
+        <a class="context-list-link" href="./index.html#results">Results</a>
+      </li>
+      <li class="context-list-item">
+        <a class="context-list-link" href="./index.html#contact">Contact</a>
+      </li>
+    </ul>
+    <ul class="context-privacy-list">
+      <li class="context-privacy-item">
+        <a class="context-privacy-link" href="./terms-and-conditions.html"
+          >Terms of Service</a
+        >
+      </li>
+      <li class="context-privacy-item">
+        <a class="context-privacy-link" href="./privacy-policy.html"
+          >Privacy Policy</a
+        >
+      </li>
+      <li class="context-privacy-item">
+        <a class="context-privacy-link" href="./cookies-policy.html"
+          >Cookies Policy</a
+        >
+      </li>
+    </ul>
+  </nav>
+</div>
+
+    <main>
+      <section class="section hero-section" id="home">
+  <div class="hero-wrapper">
+    <div class="container hero-container">
+      <div class="hero-title-wrapper">
+        <h1 class="hero-top-title">
+          Turn <span class="hero-span">Your</span> Expertise
+        </h1>
+        <p class="hero-border-text">
+          Webinars that work harder, look smarter, and grow your brand.
+        </p>
+      </div>
+      <h1 class="hero-bottom-title">
+        Into Impactful <span class="hero-span">Webinars</span>
+      </h1>
+    </div>
+    <img
+      class="hero-img"
+      src="/eventqela/assets/hero-img-mob-4d570162.png"
+      alt=""
+      width="375"
+      height="176"
+    />
+    <div class="container hero-container">
+      <p class="hero-text">
+        EventQela helps coaches, consultants, and SaaS experts craft
+        high-converting thought leadership webinars that inform, convert, and
+        scale.<br />
+        From idea to post-event content – we cover the full strategy.
+      </p>
+      <a href="#contact" class="hero-book-btn">Book a Strategy Call</a>
+    </div>
+  </div>
+  <div class="hero-wrapper-desk">
+    <div class="container hero-container">
+      <div class="hero-top-title-wrapper-desk">
+        <h1 class="hero-top-title-desk">
+          Turn <span class="hero-span">Your</span> Expertise
+        </h1>
+        <p class="hero-text-desk">
+          EventQela helps coaches, consultants, and SaaS experts craft
+          high-converting thought leadership webinars that inform, convert, and
+          scale.<br />
+          From idea to post-event content – we cover the full strategy.
+        </p>
+      </div>
+      <div class="hero-bottom-title-wrapper-desk">
+        <p class="hero-border-text-desk">
+          Webinars that work harder, look smarter, and grow your brand.
+        </p>
+        <h1 class="hero-bottom-title-desk">
+          Into Impactful <span class="hero-span">Webinars</span>
+        </h1>
+      </div>
+      <a href="#contact" class="hero-book-btn-desk">Book a Strategy Call</a>
+    </div>
+    <img
+      class="hero-img-desk"
+      src="/eventqela/assets/hero-img-desk-62199f57.png"
+      alt=""
+      width="1440"
+      height="244"
+    />
+  </div>
+</section>
+
+      <section class="section about-section" id="about">
+  <div class="container about-container">
+    <h2 class="section-title">About Us</h2>
+    <p class="section-subtitle about-subtitle">
+      Why Thought Leadership Needs Structure
+    </p>
+    <div class="about-top-wrapper">
+      <picture>
+        <source
+          srcset="/eventqela/assets/about-top-img-desk-7c0b4650.png "
+          media="(min-width: 1440px)"
+          width="628"
+          height="200"
+        />
+        <source
+          srcset="/eventqela/assets/about-top-img-mob-2be70409.png "
+          width="311"
+          height="99"
+        />
+        <img
+          class="about-top-img"
+          src="/eventqela/assets/about-top-img-mob-2be70409.png"
+          alt=""
+          width="311"
+          height="99"
+          loading="lazy"
+        />
+      </picture>
+      <div class="about-top-text-wrapper">
+        <span class="about-span"></span>
+        <p class="about-top-text">
+          We design webinars that position you as a leader—and move your
+          audience to act.
+        </p>
+      </div>
+    </div>
+    <div class="about-bottom-wrapper">
+      <picture>
+        <source
+          srcset="/eventqela/assets/about-bottom-img-desk-8e593d93.png "
+          media="(min-width: 1440px)"
+          width="628"
+          height="351"
+        />
+        <source
+          srcset="/eventqela/assets/about-bottom-img-mob-aa2f1567.png "
+          width="311"
+          height="174"
+        />
+        <img
+          class="about-bottom-img"
+          src="/eventqela/assets/about-bottom-img-mob-aa2f1567.png"
+          alt=""
+          width="311"
+          height="174"
+          loading="lazy"
+        />
+      </picture>
+      <div class="about-bottom-text-wrapper">
+        <p class="about-bottom-text">
+          Great ideas don’t convert without delivery.
+        </p>
+        <p class="about-bottom-text">
+          At EventQela, we help experts like you develop engaging webinar
+          sessions that feel polished, purposeful, and professional.
+        </p>
+        <p class="about-bottom-text">
+          Whether you’re launching your first live session or scaling up
+          recurring content, we combine platform experience with storytelling,
+          format structure, and content reuse strategies.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="section services-section" id="services">
+  <div class="container services-container">
+    <h2 class="section-title">Our Services</h2>
+    <p class="section-subtitle services-subtitle">
+      Why Thought Leadership Needs Structure
+    </p>
+    <ul class="services-list">
+      <li class="services-list-item">
+        <h3 class="services-item-title">Topic Positioning & Format Coaching</h3>
+        <p class="services-item-text">
+          Refine your niche, title, and session structure to drive value and
+          curiosity.
+        </p>
+      </li>
+      <li class="services-list-item">
+        <h3 class="services-item-title">Registration Funnel Audits</h3>
+        <p class="services-item-text">
+          Improve sign-up conversions with clear, high-converting messaging and
+          triggers.
+        </p>
+      </li>
+      <li class="services-list-item">
+        <h3 class="services-item-title">Live Webinar Structure & Moderation</h3>
+        <p class="services-item-text">
+          Plan your flow, manage interaction, and stay focused with optional
+          backstage support.
+        </p>
+      </li>
+      <li class="services-list-item">
+        <h3 class="services-item-title">Post-Webinar Repurposing</h3>
+        <p class="services-item-text">
+          Turn your webinar into blog posts, social clips, lead magnets, and
+          email content.
+        </p>
+      </li>
+    </ul>
+    <a href="#contact" class="services-btn">Get a Custom Plan</a>
+  </div>
+</section>
+
+      <section class="section clients-section" id="clients">
+  <div class="container clients-container">
+    <h2 class="section-title">Who We Work With</h2>
+    <p class="section-subtitle clients-subtitle">Built for Thought Leaders</p>
+    <p class="clients-top-text">
+       Whether you
+      <span class="clients-span">teach, coach, consult, or demo</span>—our
+      process works. EventQela supports:
+    </p>
+    <div class="clients-content-wrapper">
+      <div class="clients-top-wrapper">
+        <picture>
+          <source
+            srcset="/eventqela/assets/clients-top-img-desk-5a5e41be.png "
+            media="(min-width: 1440px)"
+            width="628"
+            height="434"
+          />
+          <source
+            srcset="/eventqela/assets/clients-top-img-mob-5a37e804.png "
+            width="311"
+            height="215"
+          />
+          <img
+            class="clients-top-img"
+            src="/eventqela/assets/clients-top-img-mob-5a37e804.png"
+            alt=""
+            width="311"
+            height="215"
+            loading="lazy"
+          />
+        </picture>
+        <ul class="clients-top-list">
+          <li class="clients-top-list-item">
+            <picture>
+              <source
+                srcset="/eventqela/assets/clients-img1-desk-b281eb5e.png "
+                media="(min-width: 1440px)"
+                width="302"
+                height="205"
+              />
+              <source
+                srcset="/eventqela/assets/clients-img1-mob-902bd61e.png "
+                width="148"
+                height="102"
+              />
+              <img
+                class="clients-img1"
+                src="/eventqela/assets/clients-img1-mob-902bd61e.png"
+                alt=""
+                width="148"
+                height="102"
+                loading="lazy"
+              />
+            </picture>
+          </li>
+          <li class="clients-top-list-item">
+            <p class="clients-item-text">Coaches building personal brands</p>
+          </li>
+          <li class="clients-top-list-item">
+            <p class="clients-item-text">Consultants growing authority</p>
+          </li>
+          <li class="clients-top-list-item">
+            <picture>
+              <source
+                srcset="/eventqela/assets/clients-img2-desk-473e7be8.png "
+                media="(min-width: 1440px)"
+                width="302"
+                height="205"
+              />
+              <source
+                srcset="/eventqela/assets/clients-img2-mob-a5f595b0.png "
+                width="148"
+                height="102"
+              />
+              <img
+                class="clients-img2"
+                src="/eventqela/assets/clients-img2-mob-a5f595b0.png"
+                alt=""
+                width="148"
+                height="102"
+                loading="lazy"
+              />
+            </picture>
+          </li>
+        </ul>
+      </div>
+      <div class="clients-bottom-wrapper">
+        <ul class="clients-bottom-list">
+          <li class="clients-bottom-list-item">
+            <p class="clients-item-text">
+              SaaS experts launching recurring webinars
+            </p>
+          </li>
+          <li class="clients-bottom-list-item">
+            <p class="clients-item-text">
+              Niche educators scaling digital content
+            </p>
+          </li>
+        </ul>
+        <picture>
+          <source
+            srcset="/eventqela/assets/clients-bottom-img-desk-472fc202.png "
+            media="(min-width: 1440px)"
+            width="628"
+            height="205"
+          />
+          <source
+            srcset="/eventqela/assets/clients-bottom-img-mob-700d4342.png "
+            width="311"
+            height="136"
+          />
+          <img
+            class="clients-bottom-img"
+            src="/eventqela/assets/clients-bottom-img-mob-700d4342.png"
+            alt=""
+            width="311"
+            height="136"
+            loading="lazy"
+          />
+        </picture>
+      </div>
+    </div>
+    <p class="clients-bottom-text">
+       If your goal is to teach, sell, or scale—your webinars need structure.
+    </p>
+    <p class="clients-bottom-subtitle">We’ll help you build it.</p>
+  </div>
+</section>
+
+      <section class="section results-section" id="results">
+  <div class="container results-container">
+    <h2 class="section-title">Results Section</h2>
+    <p class="section-subtitle results-subtitle">
+      Proven to Increase Engagement & Trust
+    </p>
+    <ul class="results-list">
+      <li class="results-list-item">
+        <p class="results-item-number">78%</p>
+        <p class="results-item-text">
+          average increase in post-webinar lead actions
+        </p>
+      </li>
+      <li class="results-list-item">
+        <p class="results-item-number">2.5x</p>
+        <p class="results-item-text">
+          growth in repeat attendance with funnel structure
+        </p>
+      </li>
+      <li class="results-list-item">
+        <p class="results-item-number">96%</p>
+        <p class="results-item-text">
+          of clients reuse webinars as high-value evergreen content
+        </p>
+      </li>
+      <li class="results-list-item">
+        <p class="results-item-number">92%</p>
+        <p class="results-item-text">
+          say their authority perception improved within 2 sessions
+        </p>
+      </li>
+    </ul>
+    <a href="#testimonials" class="results-btn">View Client Outcomes</a>
+  </div>
+</section>
+
+      <section class="section testimonials-section" id="testimonials">
+  <div class="testimonials-section-wrapper">
+    <div class="container testimonials-top-container">
+      <h2 class="section-title">Testimonials</h2>
+      <p class="section-subtitle testimonials-subtitle">
+        What Clients Are Saying
+      </p>
+    </div>
+    <div class="container testimonials-container">
+      <div class="testimonials-swiper-container">
+        <ul class="swiper-wrapper testimonials-swiper-wrapper">
+          <li class="swiper-slide testimonials-slide">
+            <div class="testimonials-picture-wrapper">
+              <picture>
+                <source
+                  srcset="/eventqela/assets/testimonials-jason-desk-9ca39c6f.png "
+                  media="(min-width: 1440px)"
+                  width="302"
+                  height="291"
+                />
+                <source
+                  srcset="/eventqela/assets/testimonials-jason-mob-31b555b2.png "
+                  width="148"
+                  height="159"
+                />
+                <img
+                  class="testimonials-img"
+                  src="/eventqela/assets/testimonials-jason-mob-31b555b2.png"
+                  alt="Avatar"
+                  width="148"
+                  height="159"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+            <div class="testimonials-text-wrapper">
+              <h3 class="testimonials-name">Jason Lee</h3>
+              <p class="testimonials-profession">B2B Sales Coach</p>
+              <p class="testimonials-text">
+                "EventQela helped me completely overhaul my webinar approach. I
+                used to just ‘talk at’ my audience for 45 minutes. Now I have an
+                interactive structure, better slides, and a format that keeps
+                people engaged. They even helped me improve my registration
+                funnel, which boosted signups by 42%. It’s not just design—they
+                truly understand strategic delivery. I now run two webinars a
+                month with confidence."
+              </p>
+            </div>
+          </li>
+          <li class="swiper-slide testimonials-slide">
+            <div class="testimonials-picture-wrapper">
+              <picture>
+                <source
+                  srcset="/eventqela/assets/testimonials-mira-desk-6b9a3afa.png "
+                  media="(min-width: 1440px)"
+                  width="302"
+                  height="291"
+                />
+                <source
+                  srcset="/eventqela/assets/testimonials-mira-mob-d914a3a9.png "
+                  width="148"
+                  height="159"
+                />
+                <img
+                  class="testimonials-img"
+                  src="/eventqela/assets/testimonials-mira-mob-d914a3a9.png"
+                  alt="Avatar"
+                  width="148"
+                  height="159"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+            <div class="testimonials-text-wrapper">
+              <h3 class="testimonials-name">Mira Thompson</h3>
+              <p class="testimonials-profession">SaaS Growth Strategist</p>
+              <p class="testimonials-text">
+                "As someone who runs monthly live demos, I thought I had things
+                under control. But the team at EventQela identified several
+                blind spots—like how I opened my sessions, where I placed my
+                CTA, and how I followed up. Their repurposing strategy was a
+                game changer. I now extract 4 pieces of content from every
+                webinar and use them across email and LinkedIn. The ROI has been
+                immediate."
+              </p>
+            </div>
+          </li>
+          <li class="swiper-slide testimonials-slide">
+            <div class="testimonials-picture-wrapper">
+              <picture>
+                <source
+                  srcset="/eventqela/assets/testimonials-lena-desk-dff755f8.png "
+                  media="(min-width: 1440px)"
+                  width="302"
+                  height="291"
+                />
+                <source
+                  srcset="/eventqela/assets/testimonials-lena-mob-ce560e52.png "
+                  width="148"
+                  height="159"
+                />
+                <img
+                  class="testimonials-img"
+                  src="/eventqela/assets/testimonials-lena-mob-ce560e52.png"
+                  alt="Avatar"
+                  width="148"
+                  height="159"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+            <div class="testimonials-text-wrapper">
+              <h3 class="testimonials-name">Dr. Lena Moore</h3>
+              <p class="testimonials-profession">Academic Educator & Author</p>
+              <p class="testimonials-text">
+                "I’ve done lectures and courses for years, but webinars were new
+                to me. EventQela helped me transition from academic to engaging
+                without losing credibility. They structured the flow, simplified
+                the content, and made the tech side stress-free. My attendees
+                now stay until the end, and I receive consistent praise on the
+                clarity of delivery. They also showed me how to convert my
+                sessions into evergreen materials for my online academy."
+              </p>
+            </div>
+          </li>
+          <li class="swiper-slide testimonials-slide">
+            <div class="testimonials-picture-wrapper">
+              <picture>
+                <source
+                  srcset="/eventqela/assets/testimonials-isaac-desk-f9c0f0bd.png "
+                  media="(min-width: 1440px)"
+                  width="302"
+                  height="291"
+                />
+                <source
+                  srcset="/eventqela/assets/testimonials-isaac-mob-2ca8741c.png "
+                  width="148"
+                  height="159"
+                />
+                <img
+                  class="testimonials-img"
+                  src="/eventqela/assets/testimonials-isaac-mob-2ca8741c.png"
+                  alt="Avatar"
+                  width="148"
+                  height="159"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+            <div class="testimonials-text-wrapper">
+              <h3 class="testimonials-name">Isaac Kwon</h3>
+              <p class="testimonials-profession">Personal Brand Consultant</p>
+              <p class="testimonials-text">
+                "Webinars used to drain me—too much setup, not enough payoff.
+                After working with EventQela, I have a repeatable system. I know
+                how to write better titles, create energy from the start, and
+                guide people toward action. Their team even handled the
+                moderation during my first two live events so I could focus on
+                speaking. I finally feel like a pro when I go live."
+              </p>
+            </div>
+          </li>
+          <li class="swiper-slide testimonials-slide">
+            <div class="testimonials-picture-wrapper">
+              <picture>
+                <source
+                  srcset="/eventqela/assets/testimonials-sarah-desk-63eff9d0.png "
+                  media="(min-width: 1440px)"
+                  width="302"
+                  height="291"
+                />
+                <source
+                  srcset="/eventqela/assets/testimonials-sarah-mob-7c8c526c.png "
+                  width="148"
+                  height="159"
+                />
+                <img
+                  class="testimonials-img"
+                  src="/eventqela/assets/testimonials-sarah-mob-7c8c526c.png"
+                  alt="Avatar"
+                  width="148"
+                  height="159"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+            <div class="testimonials-text-wrapper">
+              <h3 class="testimonials-name">Sarah Velasquez</h3>
+              <p class="testimonials-profession">
+                Career Coaching Business Owner
+              </p>
+              <p class="testimonials-text">
+                "EventQela is more than a consultancy—they’re a creative
+                partner. They helped me design a webinar that doesn’t just
+                inform—it converts. I gained over 70 new email subscribers from
+                my first session and turned the replay into a mini-course. Their
+                support was responsive, clear, and tailored to my voice and
+                audience. I’ve already recommended them to several peers."
+              </p>
+            </div>
+          </li>
+          <li class="swiper-slide testimonials-slide">
+            <div class="testimonials-picture-wrapper">
+              <picture>
+                <source
+                  srcset="/eventqela/assets/testimonials-thomas-desk-5fa303cb.png "
+                  media="(min-width: 1440px)"
+                  width="302"
+                  height="291"
+                />
+                <source
+                  srcset="/eventqela/assets/testimonials-thomas-mob-7c7799b8.png "
+                  width="148"
+                  height="159"
+                />
+                <img
+                  class="testimonials-img"
+                  src="/eventqela/assets/testimonials-thomas-mob-7c7799b8.png"
+                  alt="Avatar"
+                  width="148"
+                  height="159"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+            <div class="testimonials-text-wrapper">
+              <h3 class="testimonials-name">Thomas Rivera</h3>
+              <p class="testimonials-profession">
+                Product Educator, Early-Stage SaaSt
+              </p>
+              <p class="testimonials-text">
+                "I was under pressure to launch a polished webinar for our new
+                product feature and only had two weeks. EventQela built the
+                structure, reviewed my slides, coached me on delivery, and even
+                tested our tech setup. The event went off without a hitch and
+                led to 5 demo requests within 48 hours. That’s all the proof I
+                needed. I’ll never run another event without their input."
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="container testimonials-controls-container">
+      <div class="controls">
+        <button
+          class="arrow-btn"
+          id="testimonialsLeftArrow"
+          aria-label="Previous slide"
+        >
+          <svg class="arrow-icon" width="34" height="34">
+            <use href="/eventqela/assets/sprite-9a1000c3.svg#icon-left-arrow"></use>
+          </svg>
+        </button>
+        <button
+          class="arrow-btn"
+          id="testimonialsRightArrow"
+          aria-label="Next slide"
+        >
+          <svg class="arrow-icon" width="34" height="34">
+            <use href="/eventqela/assets/sprite-9a1000c3.svg#icon-right-arrow"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="section contact-section" id="contact">
+  <div class="container contact-container">
+    <h2 class="section-title">Contact</h2>
+    <p class="section-subtitle contact-subtitle">
+      Let’s Build Your Webinar Strategy
+    </p>
+    <div class="contact-content-wrapper">
+      <div class="contact-top-wrapper">
+        <div class="contact-email-wrapper">
+          <svg class="email-icon" width="30" height="30">
+            <use href="/eventqela/assets/sprite-9a1000c3.svg#icon-email"></use>
+          </svg>
+          <p class="contact-email-text">
+            Email:
+            <a href="mailto:info@eventqela.site" class="contact-email-link"
+              >info@eventqela.site</a
+            >
+          </p>
+        </div>
+        <div class="contact-top-text-wrapper">
+          <p class="contact-top-text"> Social Hashtags:</p>
+          <p class="contact-hashtag-text">
+            #EventQela #WebinarStrategy #ThoughtLeadershipLive
+          </p>
+        </div>
+        <div class="contact-top-text-wrapper">
+          <p class="contact-top-text">Company Info:</p>
+          <p class="contact-hashtag-text">
+            EventQela Strategy LLC – Registered Limited Liability Company
+          </p>
+        </div>
+      </div>
+      <div class="contact-bottom-wrapper">
+        <p class="contact-bottom-text">
+          Have questions or want to explore how we can work together?<br />
+          Reach out and let’s talk about your goals.
+        </p>
+        <a href="#about" class="contact-btn">Request Consultation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+    </main>
+    <footer class="footer" id="footer">
+  <div class="footer-top-wrapper">
+    <div class="container footer-container">
+      <nav class="footer-nav">
+        <ul class="footer-list">
+          <li class="footer-list-item">
+            <a class="footer-link" href="./index.html#services">Services</a>
+          </li>
+          <li class="footer-list-item">
+            <a class="footer-link" href="./index.html#about">About</a>
+          </li>
+          <li class="footer-list-item">
+            <a class="footer-link" href="./index.html#blog">Blog</a>
+          </li>
+          <li class="footer-list-item">
+            <a class="footer-link" href="./privacy-policy.html"
+              >Privacy Policy</a
+            >
+          </li>
+          <li class="footer-list-item">
+            <a class="footer-link" href="./terms-and-conditions.html"
+              >Terms of Service</a
+            >
+          </li>
+          <li class="footer-list-item">
+            <a class="footer-link" href="./cookies-policy.html"
+              >Cookies Policy</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="footer-contacts-wrapper">
+        <div class="footer-text-wrapper">
+          <p class="footer-text">
+             EventQela is a virtual strategy studio focused exclusively on
+            helping thought leaders build webinars that inform, inspire, and
+            grow their brand.
+          </p>
+        </div>
+        <div class="footer-address-wrapper">
+          <h3 class="footer-contacts-subtitle">Contact</h3>
+          <div class="footer-email-wrapper">
+            <p class="footer-email-text">Email:&nbsp;</p>
+            <a href="mailto:info@eventqela.site" class="footer-email-link"
+              >info@eventqela.site</a
+            >
+          </div>
+          <p class="footer-remote-text">Remote-first consulting</p>
+          <div class="footer-socials-wrapper">
+            <a href="" class="footer-socials-link">LinkedIn</a
+            ><span class="footer-span">&nbsp;|&nbsp;</span>
+            <a href="" class="footer-socials-link">X</a
+            ><span class="footer-span">&nbsp;|&nbsp;</span
+            ><a href="" class="footer-socials-link">YouTube</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom-wrapper">
+    <div class="container footer-container">
+      <p class="footer-bottom-text">
+         © 2025 EventQela Strategy LLC. All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>
+
+    <section id="cookie-banner" class="cookie-banner-section">
+  <h2 class="cookies-banner-title">Cookies Policy</h2>
+  <p class="cookie-banner-text">
+     We use cookies to improve your experience on our website.<br />
+    By browsing this website, you agree to our use of cookies.
+  </p>
+  <div class="cookie-banner-buttons">
+    <button class="cookie-accept-btn" id="cookie-accept">ACCEPT COOKIES</button>
+    <button class="cookie-decline-btn" id="cookie-decline">
+      DECLINE COOKIES
+    </button>
+  </div>
+</section>
+
+
+    
+  </body>
+</html>
